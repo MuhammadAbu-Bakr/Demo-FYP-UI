@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: digitforge-ai
+    runtime: node
+    rootDir: demo-fyp-ui
+    buildCommand: npm ci && npm run build
+    startCommand: npm start
+    healthCheckPath: /
+    envVars:
+      - key: NODE_VERSION
+        value: "22.20.0"

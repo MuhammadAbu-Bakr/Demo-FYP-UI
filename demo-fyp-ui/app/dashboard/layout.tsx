@@ -3,7 +3,7 @@ import Sidebar from "@/components/layout/Sidebar";
 
 export const metadata: Metadata = {
   title: "Dashboard",
-  description: "Your GANify dashboard — generate, browse, and manage MNIST digit images.",
+  description: "Your DigitForge AI dashboard — generate, browse, and manage MNIST digit images.",
 };
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {

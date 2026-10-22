@@ -45,7 +45,7 @@ export default function Input({
             "w-full h-10 rounded-xl bg-slate-900 border text-sm text-slate-100",
             "placeholder:text-slate-500",
             "transition-all duration-200",
-            "focus:outline-none focus:ring-2 focus:ring-violet-500/50 focus:border-violet-500/50",
+            "focus:outline-none focus:ring-2 focus:ring-lime-500/50 focus:border-lime-500/50",
             error
               ? "border-red-500/50 focus:ring-red-500/40"
               : "border-slate-700/60 hover:border-slate-600/60",

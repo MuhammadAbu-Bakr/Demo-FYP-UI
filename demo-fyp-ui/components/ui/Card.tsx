@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 interface CardProps {
   children: React.ReactNode;
   className?: string;
-  /** Adds a subtle violet glow on hover */
+  /** Adds a subtle green glow on hover */
   hoverable?: boolean;
   /** Glassmorphism style */
   glass?: boolean;
@@ -34,7 +34,7 @@ export default function Card({
           : "bg-slate-900/80 border-slate-800/60",
         hoverable && [
           "transition-all duration-300 cursor-pointer",
-          "hover:border-violet-500/40 hover:shadow-lg hover:shadow-violet-500/10",
+          "hover:border-lime-500/40 hover:shadow-lg hover:shadow-lime-500/10",
           "hover:-translate-y-0.5",
         ],
         paddingClasses[padding],

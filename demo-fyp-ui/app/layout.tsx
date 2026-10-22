@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import { DemoProvider } from "@/lib/demo-state";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,18 +15,18 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "GANify — GAN Image Generation Demo",
-    template: "%s | GANify",
+    default: "DigitForge AI — Handwritten Digit Demo",
+    template: "%s | DigitForge AI",
   },
   description:
-    "A polished FYP demo for Generative Adversarial Network image generation using DCGAN trained on the MNIST dataset. Built with PyTorch and FastAPI.",
+    "A frontend demo of GAN-based handwritten digit generation using MNIST samples.",
   keywords: ["GAN", "DCGAN", "MNIST", "Image Generation", "PyTorch", "Deep Learning", "FYP"],
-  authors: [{ name: "GANify FYP Team" }],
+  authors: [{ name: "DigitForge AI FYP Team" }],
   openGraph: {
     type: "website",
-    title: "GANify — GAN Image Generation Demo",
-    description: "Generate handwritten digit images using a DCGAN model trained on MNIST.",
-    siteName: "GANify",
+    title: "DigitForge AI — GAN Image Generation Demo",
+    description: "Explore a simulated GAN-based handwritten digit generation interface for MNIST.",
+    siteName: "DigitForge AI",
   },
 };
 
@@ -35,8 +36,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-slate-950 text-slate-100">
-        {children}
+        <body className="min-h-full flex flex-col bg-slate-950 text-slate-100">
+        <DemoProvider>{children}</DemoProvider>
       </body>
     </html>
   );

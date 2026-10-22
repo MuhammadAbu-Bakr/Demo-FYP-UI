@@ -12,7 +12,6 @@ const FOOTER_LINKS = {
     { label: "DCGAN Paper", href: "https://arxiv.org/abs/1511.06434", external: true },
     { label: "MNIST Dataset", href: "http://yann.lecun.com/exdb/mnist/", external: true },
     { label: "PyTorch Docs", href: "https://pytorch.org/docs/", external: true },
-    { label: "FastAPI", href: "https://fastapi.tiangolo.com/", external: true },
   ],
   Account: [
     { label: "Log In", href: "/auth/login" },
@@ -29,16 +28,16 @@ export default function Footer() {
           {/* Brand */}
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-2.5">
-              <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-violet-600 to-purple-600 shadow-lg shadow-violet-500/30">
+              <div className="flex items-center justify-center w-8 h-8 rounded-lg bg-gradient-to-br from-lime-600 to-green-600 shadow-lg shadow-lime-500/30">
                 <Sparkles size={16} className="text-white" />
               </div>
               <div className="flex flex-col leading-none">
-                <span className="font-bold text-sm text-white">GANify</span>
+                <span className="font-bold text-sm text-white">DigitForge AI</span>
                 <span className="text-[10px] text-slate-400">DCGAN · MNIST</span>
               </div>
             </div>
             <p className="text-sm text-slate-500 leading-relaxed max-w-[200px]">
-              A final year project exploring Generative Adversarial Networks for MNIST digit generation.
+              A frontend demonstration exploring GAN-based handwritten digit generation for MNIST.
             </p>
             <div className="flex items-center gap-2">
               <a
@@ -85,14 +84,14 @@ export default function Footer() {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm text-slate-400 hover:text-violet-400 transition-colors"
+                        className="text-sm text-slate-400 hover:text-lime-400 transition-colors"
                       >
                         {link.label} ↗
                       </a>
                     ) : (
                       <Link
                         href={link.href}
-                        className="text-sm text-slate-400 hover:text-violet-400 transition-colors"
+                        className="text-sm text-slate-400 hover:text-lime-400 transition-colors"
                       >
                         {link.label}
                       </Link>
@@ -107,11 +106,10 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="mt-10 pt-6 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-3">
           <p className="text-xs text-slate-600">
-            © 2025 GANify — Final Year Project Demo. Not for commercial use.
+            © 2026 DigitForge AI — Final Year Project Demo. Not for commercial use.
           </p>
           <p className="text-xs text-slate-600">
-            Built with{" "}
-            <span className="text-violet-500">Next.js · PyTorch · FastAPI</span>
+            <span className="text-lime-500">Frontend demo · Generation is simulated</span>
           </p>
         </div>
       </div>
